@@ -1,0 +1,12 @@
+<div class="parent">
+    <div *ngFor="let a of flipkart" class="fp1" >
+        <img src="{{a.image}}" alt="" height="200px" width="300px">
+        
+        <p style="color: green;">{{a.title}}</p>
+        <p><b>&#8377;{{a.price}}</b></p>
+    <div class="des"><p>{{a.description}} </p> </div> 
+        <p>{{a.category}}</p>
+        <p><b>{{a.rating.rate}}</b></p>
+        <p>{{a.rating.count}}</p>
+    </div>
+</div>

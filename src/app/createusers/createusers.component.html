@@ -1,0 +1,23 @@
+<div class="parent">
+    <div class="child">
+        <form [formGroup]="usersForm">
+            <br>
+            <h2>Create Users</h2>
+            <label>Name :</label>
+            <input type="text" formControlName="name">
+            <br>
+            <label>Phone :</label>
+            <input type="text" formControlName="phone">
+            <br>
+            <label>City :</label>
+            <input type="text" formControlName="city">
+            <br>
+            <label>Fee</label>
+            <input type="text" formControlName="fee">
+            <br><br>
+            <button (click)="submit()">submit</button>
+        </form>
+
+    </div>
+
+</div>

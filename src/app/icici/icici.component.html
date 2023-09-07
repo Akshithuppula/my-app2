@@ -1,0 +1,26 @@
+<table class="table table-dark table-border">
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profie_picture</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let icici of icici; let i= index;">
+            <td>{{i + 1}}</td>
+            <td>{{icici.account_name}}</td>
+            <td>{{icici.available_balance}}</td>
+            <td>{{icici.account_number}}</td>
+            <td>{{icici.city}}</td>
+            <td>
+                <img src="{{icici.profie_picture}}" alt="" height="100px" width="100px">
+            </td>
+            <td>{{icici.id}}</td>
+            
+        </tr>
+    </tbody>
+</table>

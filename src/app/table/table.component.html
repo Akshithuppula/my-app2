@@ -1,0 +1,35 @@
+<p>table works!</p>
+
+<input type="text" placeholder="search" [(ngModel)]="term" (keypress)="filter()">&nbsp;&nbsp;
+<button style="background-color: blue; color: white;" (click)="freedelivery()">Only free delivery</button>
+<br><br>
+<button style="background-color: yellow;" (click)="priceHighToLow()">price high to low </button>&nbsp;&nbsp;
+<button style="background-color: yellow;" (click)="priceLowToHigh()">price low to high</button>&nbsp;&nbsp;
+<button style="background-color: yellow;" (click)="ratingHighToLow()">rating high to low</button>&nbsp;&nbsp;
+<button style="background-color: yellow;" (click)="ratingLowToHigh()">rating low to high</button>&nbsp;&nbsp;
+
+<br><br>
+<button style="background-color: lightskyblue; color: white;" (click)=" applydiscount()">Apply 50% discount</button>&nbsp;&nbsp;
+<button  style="background-color: lightskyblue; color: white;" (click)="deliverycharge()">price with delivery charges</button>&nbsp;&nbsp;
+<br><br>
+<button style="background-color: black; color: white;" (click)="total()">Total price</button>&nbsp;&nbsp;
+<button style="background-color: black; color: white;" (click)="cartitems()">Total cart items</button>&nbsp;&nbsp;
+<br><br>
+<table class="table table-dark table-borderded">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>price</th>
+            <th>Rating</th>
+            <th>Free Delivery</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price | price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.freedelivery}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<div class="parent">
+    <div class="f1">
+        <h3>Account form</h3>
+
+        <form [formGroup]="accountForm">
+
+        <label >account_name :</label>
+        <input type="text" formControlName="account_name">
+        <br>
+        <label >available_balance :</label>
+        <input type="text" formControlName="available_balance">
+        <br>
+        <label >account_number :</label>
+        <input type="number" formControlName="account_number">
+        <br>
+        <label >city :</label>
+        <input type="text" formControlName="city">
+        <br><br>
+        <button (click)="submit()">submit</button>
+    </form>
+    </div>
+</div>

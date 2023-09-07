@@ -1,0 +1,45 @@
+
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+
+
+}
+
+@media only screen and (min-width:350px)
+             and (max-width:600px){
+    .parent{
+        width: 100%;
+    }
+    
+}
+.child{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid gray;
+    /* padding: 15px; */
+    border-radius: 5px;
+    
+    /* margin-right: 350px; */
+}
+input{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 20px;
+}
+button{
+    margin: 10px;
+    background-color: aqua;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

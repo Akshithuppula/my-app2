@@ -1,0 +1,27 @@
+<table class="table table-white table-bordered">
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profie_picture</th>
+            <th>id</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let axis of axis; let i = index">
+            <td>{{i +1}}</td>
+            <td>{{axis.account_name}}</td>
+            <td>{{axis.available_balance}}</td>
+            <td>{{axis.account_number}}</td>
+            <td>{{axis.city}}</td>
+            <td>{{axis.profie_picture}}</td>
+            <td>{{axis.id}}</td>
+
+        </tr>
+    </tbody>
+</table>

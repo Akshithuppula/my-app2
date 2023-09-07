@@ -1,0 +1,34 @@
+<p>marksheet works!</p>
+
+<input type="text" placeholder="search">&nbsp;
+<button>Only free delivery</button>&nbsp;&nbsp;
+<br><br>
+<button>price low to high</button>&nbsp;&nbsp;
+<button>price high to low</button>&nbsp;&nbsp;
+<button>rating low to high</button>&nbsp;&nbsp;
+<button>rating high to low</button>&nbsp;&nbsp;
+<br><br>
+<button>Apply 50% discount</button>&nbsp;&nbsp;
+<button>price with delivery charges</button>&nbsp;&nbsp;
+<br><br>
+<button>total price</button>>&nbsp;&nbsp;
+<button>Total cart items</button>&nbsp;&nbsp;
+
+<table class="table table-dark table-borderded">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>price</th>
+            <th>Rating</th>
+            <th>Free Delivery</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let marksheet of marksheets">
+            <td>{{marksheet.name}}</td>
+            <td>{{marksheet.price}}</td>
+            <td>{{marksheet.rating}}</td>
+            <td>{{marksheet.freedelivery}}</td>
+        </tr>
+    </tbody>
+</table>

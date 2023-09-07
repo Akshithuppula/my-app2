@@ -1,0 +1,24 @@
+<table class="table table-white table-bordered">
+    <thead>
+        <tr>
+            <th>Account_name</th>
+            <th>Available_balance</th>
+            <th>Account_number</th>
+            <th>City</th>
+            <th>Profie_picture</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sbi of sbis">
+            <td>{{sbi.account_name}}</td>
+            <td>{{sbi.available_balance}}</td>
+            <td>{{sbi.account_number}}</td>
+            <td>{{sbi.city}}</td>
+            <td>
+                <img src="{{sbi.profie_picture}}" alt="" width="100px" height="100px">
+            </td>
+            <td>{{sbi.id}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color: aliceblue;
+     margin-top: 100px;
+    padding: 50px;
+    border-radius: 10px;
+    outline: 10px solid gray;
+
+}
+label{
+    width: 100px;
+}
+input{
+    margin-bottom: 5px;
+}
+button{
+    margin-left: 80px;
+    border: 0px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 30px;
+    width: 150px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
