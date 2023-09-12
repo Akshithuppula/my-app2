@@ -41,6 +41,7 @@
             <th>Profie picture</th>
             <th>Id</th>
             <th>action</th>
+            <th>View</th>
         </tr>
     </thead>
     <tbody>
@@ -53,7 +54,13 @@
                 <img src="{{account.profie_picture}}" alt="" width="100px" height="100px">
             </td>
             <td>{{account.id}}</td>
-            <td><button (click)="getdeleteaccount(account.id)" class="btn btn-danger">delete</button></td>
+            <td>
+                <button (click)="getdeleteaccount(account.id)" class="btn btn-danger">delete</button>
+            </td>
+            <td>
+                <button  (click)="view(account.id)">View</button>
+            </td>
+
         </tr>
     </tbody>
 </table>

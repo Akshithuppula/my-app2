@@ -35,6 +35,7 @@ import { CreateusersComponent } from './createusers/createusers.component';
 import { authenticationGuard } from './authentication.guard';
 import { notifyGuard } from './notify.guard';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -68,7 +69,8 @@ const routes: Routes = [
     {path:'createaccount',component:CreateaccountComponent},
     {path:'createusers',component:CreateusersComponent,canDeactivate:[notifyGuard]},
     {path:'vehicledetails/:id',component:VehicledetailsComponent},
-    {path:'editvehicle/:id',component:CreatevehicleComponent}
+    {path:'editvehicle/:id',component:CreatevehicleComponent},
+    {path:'accountdetails/:id',component:AccountdetailsComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component:PageNotFoundComponent}

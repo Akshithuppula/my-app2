@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountService } from '../account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -16,7 +17,7 @@ public limit:any =[];
 public page:any = [];
 
 
-constructor(private accountsService:AccountService){
+constructor(private accountsService:AccountService, private router:Router){
   
   accountsService.getAccount().subscribe(
     (data:any)=>{
@@ -71,6 +72,12 @@ constructor(private accountsService:AccountService){
     }
   )
  }
+
+
+view(id:number){
+  this.router.navigateByUrl('/dashboard/accountdetails/'+id);
+}
+ 
 
 }
 

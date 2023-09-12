@@ -34,6 +34,11 @@ export class AccountService {
    createaccount(data:any):Observable<any>{
     return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data);
    }
+
+
+   getvehicledetails(id:any):Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
+   }
  }
 
 
