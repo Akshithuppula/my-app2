@@ -67,7 +67,8 @@ const routes: Routes = [
     {path:'createvehicle',component:CreatevehicleComponent},
     {path:'createaccount',component:CreateaccountComponent},
     {path:'createusers',component:CreateusersComponent,canDeactivate:[notifyGuard]},
-    {path:'vehicledetails/:id',component:VehicledetailsComponent}
+    {path:'vehicledetails/:id',component:VehicledetailsComponent},
+    {path:'editvehicle/:id',component:CreatevehicleComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component:PageNotFoundComponent}

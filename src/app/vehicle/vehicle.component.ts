@@ -80,4 +80,8 @@ getpagedvehicle(){
 view(id:number){
   this.router.navigateByUrl('/dashboard/vehicledetails/'+id);
 }
+
+edit(id:number){
+  this.router.navigateByUrl('/dashboard/editvehicle/'+id);
+}
 }
