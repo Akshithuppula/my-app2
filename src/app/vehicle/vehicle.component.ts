@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { emitDistinctChangesOnlyDefaultValue } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicle',
@@ -18,7 +19,7 @@ public limit:any = [];
 public page:any = [];
 
 
-constructor(private vehicleService:VehicleService){
+constructor(private vehicleService:VehicleService, private router:Router){
 
 vehicleService.getVehicle().subscribe(
   (data:any)=>{
@@ -73,5 +74,10 @@ getpagedvehicle(){
       alert("Internal serve error")
     }
   )
+}
+
+
+view(id:number){
+  this.router.navigateByUrl('/dashboard/vehicledetails/'+id);
 }
 }

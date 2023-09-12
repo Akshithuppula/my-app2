@@ -34,6 +34,9 @@ export class VehicleService {
     return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit",data);
    }
 
+   getvehicledetails(id:any):Observable<any>{
+    return  this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+ id);
+   }
 
   }
 
