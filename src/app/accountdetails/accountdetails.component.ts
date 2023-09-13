@@ -18,7 +18,7 @@ constructor(private activatedRoute:ActivatedRoute, private accountservice:Accoun
   activatedRoute.params.subscribe(
    (data:any)=>{
     this.id = data.id;
-    accountservice. getvehicledetails(this.id).subscribe(
+    accountservice. getaccountd(this.id).subscribe(
       (data:any)=>{
         this.account= data;
       }
@@ -26,5 +26,7 @@ constructor(private activatedRoute:ActivatedRoute, private accountservice:Accoun
    } 
   )
 }
+
+
 
 }

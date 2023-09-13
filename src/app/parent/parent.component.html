@@ -1,0 +1,17 @@
+<div class="h11">
+
+     <p>parent works</p>
+  
+
+    <label>num1</label>
+    <input type="number" [(ngModel)]="num1" >
+    <br>
+
+    <label>num2</label>
+    <input type="number" [(ngModel)]="num2">
+    <br>
+
+    <p>Result : {{result}}</p>
+    <app-child [c1]="num1" [c2]="num2" (cal)="catch($event)" ></app-child>
+
+</div>

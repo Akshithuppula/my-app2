@@ -59,7 +59,7 @@ export class CreatevehicleComponent {
       // Create
       this.vehicleService.createVehicle(this.vehicleForm.value).subscribe(
         (data:any)=>{
-          alert("Created successgully");
+          alert("Created successfully");
         },
         (err:any)=>{
           alert("Internal server error");

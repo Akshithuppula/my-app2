@@ -36,8 +36,14 @@ export class AccountService {
    }
 
 
-   getvehicledetails(id:any):Observable<any>{
+   getaccountd(id:any):Observable<any>{
     return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
+   }
+   
+
+   updateaccount(id:number,data:any):Observable<any>{
+    return this.httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id,data);
+
    }
  }
 

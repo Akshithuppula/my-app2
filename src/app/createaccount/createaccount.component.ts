@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AccountService } from '../account.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-createaccount',
@@ -16,20 +17,48 @@ public accountForm: FormGroup = new FormGroup({
   city: new FormControl()
 });
 
-  constructor(private createaccountService:AccountService){}
+  public id:any = [];
+
+  constructor(private accountService:AccountService, private activatedRoute: ActivatedRoute){
+
+    this.activatedRoute.params.subscribe(
+      (data:any)=>{
+        this.id = data.id;
+
+       this.accountService.getaccountd(this.id).subscribe(
+        (data:any)=>{
+          this.accountForm.patchValue(data);
+        }
+       )
+      }
+    )
+
+  }
 
 submit(){
   console.log(this.accountForm);
 
-  this.createaccountService.createaccount(this.accountForm.value).subscribe(
+ if(this.id){
+                   //  edit
+   this.accountService.updateaccount(this.id,this.accountForm.value).subscribe(
     (data:any)=>{
-      alert("Account created successfully");
+      alert("updata successfully");
     },
     (err:any)=>{
-      alert("Account creation failed");
+      alert("internal server error");
+    }
+   )
+  }
+else{
+  this.accountService.createaccount(this.accountForm.value).subscribe(
+    (data:any)=>{
+      alert("Created successfully");
+    },
+    (err:any)=>{
+      alert("Internal server error");
     }
   )
-
 }
 
+}
 }

@@ -78,6 +78,9 @@ view(id:number){
   this.router.navigateByUrl('/dashboard/accountdetails/'+id);
 }
  
+edit(id:number){
+  this.router.navigateByUrl('/dashboard/editaccount/'+id);
+}
 
 }
 

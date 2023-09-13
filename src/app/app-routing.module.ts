@@ -36,9 +36,13 @@ import { authenticationGuard } from './authentication.guard';
 import { notifyGuard } from './notify.guard';
 import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
 import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+import { TodoappComponent } from './todoapp/todoapp.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
+  {path:'todoapp',component:TodoappComponent},
   {path:'dashboard', component:DashbordComponent,canActivate:[authenticationGuard],children:[
     {path:'home', component:HomeComponent},
     {path:'about', component:AboutComponent},
@@ -70,7 +74,10 @@ const routes: Routes = [
     {path:'createusers',component:CreateusersComponent,canDeactivate:[notifyGuard]},
     {path:'vehicledetails/:id',component:VehicledetailsComponent},
     {path:'editvehicle/:id',component:CreatevehicleComponent},
-    {path:'accountdetails/:id',component:AccountdetailsComponent}
+    {path:'accountdetails/:id',component:AccountdetailsComponent},
+   {path:'editaccount/:id',component:CreateaccountComponent},
+   {path:'parent',component:ParentComponent},
+   {path:'child',component:ChildComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component:PageNotFoundComponent}

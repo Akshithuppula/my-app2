@@ -1,0 +1,32 @@
+.parent{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+}
+.child{
+    text-align: center;
+    align-items: center;
+    border: 3px solid gray;
+    height: 50%;
+    width: 60%;
+}
+input{
+    margin-top: 30px;
+    margin-left: 35px;
+    width: 65%;
+    height: 15%;
+}
+button{
+    width: 25%;
+    height: 15%;
+    border: 0cap;
+}
+h3{
+    color: aliceblue;
+    margin-top: 20px;
+}
+.box{
+
+}
