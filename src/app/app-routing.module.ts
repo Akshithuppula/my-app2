@@ -42,6 +42,7 @@ import { ChildComponent } from './child/child.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { PhoneComponent } from './phone/phone.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -83,7 +84,8 @@ const routes: Routes = [
    {path:'child',component:ChildComponent},
    {path:'item',component:ItemComponent},
    {path:'nav',component:NavComponent},
-   {path:'cart',component:CartComponent}
+   {path:'cart',component:CartComponent},
+   {path:'phone',component:PhoneComponent}
   ]},
   {path:'',component: LoginComponent},
   {path:'**',component:PageNotFoundComponent}

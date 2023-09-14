@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="text-box"></div>
+    <h1>Message</h1>
+    
+</div>
+
+<div class="nav">
+    <input type="search" [(ngModel)]="term" (keypress)="getfilter()">
+</div>
+
+<div class="contant" *ngFor="let a of phone.results">
+    <div class="image">
+        <img src="{{a.picture.large}}" alt="" height="100px" width="100px">
+        <div class="user">
+            <h3>{{a.name.first}} {{a.name.last}}</h3>
+            <p>{{a.cell}}</p>
+
+        </div>
+    </div>
+</div>
+<div *ngIf="getfilter.length === 0 && term.length > 0" class="not-found">
+    No users found.
+</div>
