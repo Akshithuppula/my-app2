@@ -12,20 +12,23 @@
     margin-left: 10px;
 }
 .header{
-    height: 15%;
+    height: 120px;
     width: 100%;
     background-color: blue;
     color: white;
     text-align: left;
     justify-content: left;
+    padding-top: 20px;
 }
 .nav {
-    height: 10%;
+
+    height: 80px;
     width: 100%;
     background-color: rgb(108, 163, 108);
 }
 input{
-    border-radius: 20px;
+    font-size: 20px;
+    border-radius: 30px;
     width: 98%;
     height: 55px;
     margin-left: 10px;
@@ -43,17 +46,25 @@ h4{
 
 .text-box {
     background-color: #000;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     height: 30px;
-    width: 150px;
-    border-radius: 50px;
-    border-top-right-radius: 1px;
-    border-top-left-radius: 1px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    width: 120px;
+    border-radius: 20px;
+    /* border-top-right-radius: 1px;
+    border-top-left-radius: 1px; */
+    position: fixed;
+    top: 15px;
+    left: calc(50% - 60px);
+    /* border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; */
   }
  h1{
 margin-left: 30px;
 
+ }
+ .not-found{
+    height: 30px;
+    color: rgb(25, 4, 4);
+    text-align: center;
  }

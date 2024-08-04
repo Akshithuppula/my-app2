@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -43,6 +43,8 @@ import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { PhoneComponent } from './phone/phone.component';
+import { AboutCeoComponent } from './about/about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -85,14 +87,21 @@ const routes: Routes = [
    {path:'item',component:ItemComponent},
    {path:'nav',component:NavComponent},
    {path:'cart',component:CartComponent},
-   {path:'phone',component:PhoneComponent}
+   {path:'about-ceo',component:AboutCeoComponent},
+   {path:'about-company',component:AboutCompanyComponent},
+   {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+   }
+
   ]},
+  {path:'phone',component:PhoneComponent},
   {path:'',component: LoginComponent},
   {path:'**',component:PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

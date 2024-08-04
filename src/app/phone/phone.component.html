@@ -4,11 +4,12 @@
     
 </div>
 
+
 <div class="nav">
-    <input type="search" [(ngModel)]="term" (keypress)="getfilter()">
+    <input type="search" [(ngModel)]="term"  placeholder="search contact">
 </div>
 
-<div class="contant" *ngFor="let a of phone.results">
+<div class="contant" *ngFor="let a of phone.results  | filter: term">
     <div class="image">
         <img src="{{a.picture.large}}" alt="" height="100px" width="100px">
         <div class="user">
@@ -18,6 +19,7 @@
         </div>
     </div>
 </div>
-<div *ngIf="getfilter.length === 0 && term.length > 0" class="not-found">
+
+<div *ngIf="phone.results.length === 0 && term.length > 0" class="not-found">
     No users found.
 </div>

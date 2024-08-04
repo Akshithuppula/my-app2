@@ -49,6 +49,8 @@ import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { PhoneComponent } from './phone/phone.component';
+import { AboutModule } from './about/about.module';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -96,13 +98,16 @@ import { PhoneComponent } from './phone/phone.component';
     NavComponent,
     CartComponent,
     PhoneComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
